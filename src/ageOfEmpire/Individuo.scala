@@ -16,3 +16,12 @@ class Espadachin(){}
 class Misil(var antiguedad: Int) extends Atacante {
   def potencialOfensivo = (2016 - antiguedad) * 10
 }
+
+class Muralla(
+              var altura: Int = 1, // metros
+              var espesor: Int = 20 // centimetros
+             ) extends Defensor {
+  var energia = 500
+  def potencialDefensivo = altura * espesor
+  def recibirDanio(danio: Int) = this.energia -= danio
+}
