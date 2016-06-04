@@ -12,3 +12,7 @@ class Guerrero(
 }
 
 class Espadachin(){}
+
+class Misil(var antiguedad: Int) extends Atacante {
+  def potencialOfensivo = (2016 - antiguedad) * 10
+}
