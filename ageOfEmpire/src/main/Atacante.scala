@@ -1,4 +1,4 @@
-package ageOfEmpire
+package main
 
 /**
   * Created by Eric on 02/06/2016.

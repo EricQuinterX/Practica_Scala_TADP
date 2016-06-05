@@ -1,6 +1,6 @@
-package ageOfEmpire_test
+package pelea_test
 
-import ageOfEmpire._
+import main._
 
 import org.junit.Before
 import org.junit.Assert.assertEquals
@@ -17,13 +17,19 @@ class PeleaDeTitanes_Test {
   @Before
   def crearPersonajes() = {
     atila = new Guerrero(200, 20, 10)
-    pepe = new Guerrero(20,0,0)
+    pepe = new Guerrero(20, 20, 0)
   }
 
   @Test
   def atilaMataAPepe() = {
     atila.atacarA(pepe)
     assertEquals(0,pepe.energia)
+  }
+
+  @Test
+  def pepePegaAatila10veces() = {
+    1 to 10 foreach{ _ => pepe.atacarA(atila)}
+    assertEquals(100, atila.energia)
   }
 
 }
