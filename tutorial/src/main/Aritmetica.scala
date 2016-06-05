@@ -1,6 +1,6 @@
 package main
 
-import math._
+import scala.math._
 
 object Aritmetica extends App{
 
